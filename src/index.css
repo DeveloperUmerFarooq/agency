@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500&display=swap');
+
+:root { font-family: 'Manrope', sans-serif; color: #111310; background: #f2f1ed; font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; --ink: #111310; --paper: #f2f1ed; --acid: #bffb4f; --cyan: #76e8e2; --muted: #686b65; --line: rgba(17, 19, 16, 0.16); }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; min-height: 100vh; overflow-x: hidden; }
+body, button, a { font-family: inherit; }
+a { color: inherit; }
+button { color: inherit; }
+::selection { background: var(--acid); color: var(--ink); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
