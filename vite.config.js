@@ -6,6 +6,19 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [
     react(),
-    babel({ presets: [reactCompilerPreset()] })
+    babel({ presets: [reactCompilerPreset()] }),
   ],
+  build: {
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('/node_modules/gsap/')) return 'animation'
+          if (id.includes('/node_modules/lucide-react/')) return 'icons'
+          if (id.includes('/node_modules/react/') || id.includes('/node_modules/react-dom/')) return 'react'
+          return undefined
+        },
+      },
+    },
+  },
 })
